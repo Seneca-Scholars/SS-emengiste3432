@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 app.use(express.json()); // This middleware is used to parse JSON bodies.
 
+const apple = "apple"
+
 
 app.get('/api/items', (req, res) => {
     let myCareer = [
@@ -18,7 +20,7 @@ app.get('/api/items', (req, res) => {
   });
 
   app.post('/api/items', (req, res) => {
-    const newItem = req.body; // Data sent in the request body.
+    const newItem = req.body; // Data sent in the request body. Testing comment comment 
     res.send(`Item added: ${newItem.name}`);
   });
   
